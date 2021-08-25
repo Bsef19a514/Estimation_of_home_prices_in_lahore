@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Lahore City Home Price Estimation</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="app.js"></script>
+    <link rel="stylesheet" href="app.css">
+    <link href='https://fonts.googleapis.com/css?family=Noto Sans JP' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css2?family=Kaisei+Decol:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="logo" style="display: flex; height: 12vw; ">
+
+        <div class="logoimg" style="height: 12vw; width: 6vw;"> <img style="height: 12vw;" src="./images/images-removebg-preview.png" alt="logo"></div>
+
+        <div class="mainHeading" style=" margin: 0 auto; height: 12vw; line-height: 1vw; width: 35vw;">
+            <h1 style=" color: #32CD32;  font-family: 'Kaisei Decol', serif; text-align: center; padding-bottom: 5%; font-size: 4vw;">Zem Real Estate</h1>
+            <h1 style="font-weight: bolder; color: black;  font-family: Noto Sans JP; text-align: center; padding-bottom: 5%;font-weight: bolder; font-size: 2vw;">Get an Estimate of Your Home.</h1>
+        </div>
+
+    </div>
+
+    <div class="img"></div>
+    <form class="form">
+        <h2 style="color: black;">Area (Square Feet)</h2>
+        <input class="area" type="text" id="uiSqft" class="floatLabel" name="Squareft" value="1000">
+        <h2 style="color: black;">Bedrooms</h2>
+        <div class="switch-field">
+            <input type="radio" id="radio-bedrooms-1" name="uibedrooms" value="1" />
+            <label for="radio-bedrooms-1">1</label>
+            <input type="radio" id="radio-bedrooms-2" name="uibedrooms" value="2" checked/>
+            <label for="radio-bedrooms-2">2</label>
+            <input type="radio" id="radio-bedrooms-3" name="uibedrooms" value="3" />
+            <label for="radio-bedrooms-3">3</label>
+            <input type="radio" id="radio-bedrooms-4" name="uibedrooms" value="4" />
+            <label for="radio-bedrooms-4">4</label>
+            <input type="radio" id="radio-bedrooms-5" name="uibedrooms" value="5" />
+            <label for="radio-bedrooms-5">5</label>
+            <input type="radio" id="radio-bedrooms-6" name="uibedrooms" value="6" />
+            <label for="radio-bedrooms-6">6</label>
+            <input type="radio" id="radio-bedrooms-7" name="uibedrooms" value="7" />
+            <label for="radio-bedrooms-5">7</label>
+            <input type="radio" id="radio-bedrooms-8" name="uibedrooms" value="8" />
+            <label for="radio-bedrooms-5">8</label>
+        </div>
+    </form>
+
+    <form class="form">
+        <h2 style="color: black;">Location</h2>
+        <div></div>
+        <select class="location" name="" id="uiLocations">
+    <option value="" disabled="disabled" selected="selected">Choose a Location</option>
+		<option>Johar Town</option>
+        <option>Wapda Town</option>
+  </select>
+        </div>
+        <button class="submit" onclick="onClickedEstimatePrice()" type="button">Estimate Price</button>
+        <div id="uiEstimatedPrice" class="result">
+            <h2></h2>
+        </div>
+</body>
+
+</html>
